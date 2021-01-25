@@ -38,7 +38,7 @@ public class Index extends JFrame {
         // Welcome label
         constraints.gridx = 0;
         constraints.gridy = 0;
-        constraints.weighty = 0;
+        constraints.weighty = 0.1;
         constraints.anchor = GridBagConstraints.CENTER;
         this.add(label, constraints);
 
