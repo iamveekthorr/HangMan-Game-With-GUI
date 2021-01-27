@@ -76,4 +76,5 @@ public class guiClass extends JFrame {
         this.add(keyboard, BorderLayout.SOUTH);
 
     }
+
 }

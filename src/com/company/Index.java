@@ -2,6 +2,8 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Index extends JFrame {
     public Index(String title){
@@ -13,6 +15,7 @@ public class Index extends JFrame {
         setSize(600, 300 );
         setResizable(false);
         this.addControls();
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     private void addControls() {
@@ -43,6 +46,14 @@ public class Index extends JFrame {
         this.add(label, constraints);
 
         // Button 1
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                guiClass gameWindow = new guiClass();
+                gameWindow.init();
+
+            }
+        });
         button1.setText("Play Game");
         constraints.gridx = 0;
         constraints.gridy = 1;
